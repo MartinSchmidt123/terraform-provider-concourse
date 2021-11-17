@@ -30,7 +30,7 @@ func NewConcourseClient() (concourse.Client, error) {
 		concourseUsername,
 		concoursePassword,
 		concourseCaFile,
-		concourseSkipCertificateVerification
+		concourseSkipCertificateVerification,
 	)
 
 	if err != nil {
