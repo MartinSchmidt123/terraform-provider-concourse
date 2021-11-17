@@ -19,13 +19,18 @@ const (
 	concourseTeam     = "main"
 	concourseUsername = "admin"
 	concoursePassword = "password"
+	concourseCaFile = ""
+	concourseSkipCertificateVerification = false
 )
 
 func NewConcourseClient() (concourse.Client, error) {
 	c, err := client.NewConcourseClient(
 		concourseURL,
 		concourseTeam,
-		concourseUsername, concoursePassword,
+		concourseUsername,
+		concoursePassword,
+		concourseCaFile,
+		concourseSkipCertificateVerification
 	)
 
 	if err != nil {
